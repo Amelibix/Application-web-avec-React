@@ -1,0 +1,21 @@
+.error{
+    color: var(--primary);
+    margin-top: 150px;
+    margin-bottom: 70px;
+    justify-content: space-around;
+
+    h1 {
+        font-size: 288px;
+        font-weight: 700;
+    }
+    p {
+        font-size: 36px;
+        margin-top: 66px;
+        margin-bottom: 150px;
+    }
+    a {
+        color: var(--primary); 
+        font-size: 18px;
+        
+    }
+}
