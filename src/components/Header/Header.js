@@ -9,11 +9,10 @@ function Header() {
 
   return (
     <header className={`${styles.header} d-flex flex-row align-items-center`}>
-      <div className="flex-fill">
-        <NavLink to="/">
-          <img src={logo} alt="Logo Kasa" />
-        </NavLink>
-      </div>
+      <NavLink to="/">
+        <img className={styles.logo} src={logo} alt="Logo Kasa" />
+      </NavLink>
+
       <ul>
         <NavLink
           to="/"

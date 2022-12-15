@@ -5,10 +5,10 @@ import { NavLink } from "react-router-dom";
 function Footer() {
   return (
     <footer
-      className={`${styles.footer} d-flex flex-column align-items-center justify-content-center p-20`}
+      className={`${styles.footer} d-flex flex-column align-items-center justify-content-center`}
     >
       <NavLink to="/">
-        <img src={logoFooter} alt="Logo Kasa" />
+        <img className={styles.logofooter} src={logoFooter} alt="Logo Kasa" />
       </NavLink>
       <p>© 2020 Kasa. All rights reserved</p>
     </footer>

@@ -1,15 +1,16 @@
 .grid {
     display: grid;
     place-content: center;
-    grid-template-columns: repeat(3,350px);
-    grid-auto-columns: repeat(3,350px);
+    grid-template-columns: repeat(3,340px);
+    grid-auto-columns: repeat(3,340px);
     gap: 50px;
+    
 }
 
 .contentCard {
-    width: 1200px;
+    padding: 50px;
+    border-radius: 25px;
+    background-color: var(--gray-1);
+    margin: 50px 100px;
 }
-.elem {
-    height: 350px;
-    border: 1px solid red;
-  }
+
