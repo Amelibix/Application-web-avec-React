@@ -12,7 +12,6 @@ function Header() {
       <NavLink to="/">
         <img className={styles.logo} src={logo} alt="Logo Kasa" />
       </NavLink>
-
       <ul>
         <NavLink
           to="/"
