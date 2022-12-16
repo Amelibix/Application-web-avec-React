@@ -3,6 +3,7 @@ import App from "./App";
 import Accueilpage from "./pages/Accueil/Accueil";
 import Propos from "./pages/A-propos/A-propos";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
+import Logement from "./pages/LogementPage/LogementPage";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
       {
         path: "/a-propos",
         element: <Propos />,
+      },
+      {
+        path: "/logement",
+        element: <Logement />,
       },
       {
         path: "/*",

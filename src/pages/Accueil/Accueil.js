@@ -1,6 +1,6 @@
 import styles from "./Accueil.module.scss";
 //import React, { useEffect } from "react";
-import Logement from "../Logements/Logement";
+import Logement from "../../components/Logements/Logement";
 import { data } from "../../data/dataLogement";
 import Banner from "../../components/Banner/Banner";
 
