@@ -9,9 +9,11 @@ function ProposPage() {
   return (
     <div className="flex-fill">
       <Banner className={styles.containerBanner} />
-      {sectionData.map((r) => (
-        <Collapse key={r.id} title={r.title} text={r.text} />
-      ))}
+      <div className={` d-flex flex-column ${styles.containerCollapse}`}>
+        {sectionData.map((r) => (
+          <Collapse key={r.id} title={r.title} text={r.text} />
+        ))}
+      </div>
     </div>
   );
 }
