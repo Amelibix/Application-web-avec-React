@@ -9,10 +9,10 @@ function Accueilpage() {
   return (
     <div className="flex-fill">
       <Banner />
-      <div className={`${styles.contentCard} `}>
+      <div className={styles.contentCard}>
         <div className={styles.grid}>
           {logementData.map((r) => (
-            <Logement key={r._id} title={r.title} image={r.cover} />
+            <Logement key={r.id} title={r.title} image={r.cover} />
           ))}
         </div>
       </div>

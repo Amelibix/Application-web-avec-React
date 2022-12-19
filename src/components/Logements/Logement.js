@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Logement.module.scss";
 
-function Logement({ title, image, _id }) {
+function Logement({ title, image }) {
   return (
     /*fetch ("https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/Front-End+V2/P9+React+1/logements.json")
 .then((res)=> res.json())

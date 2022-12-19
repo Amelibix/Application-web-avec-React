@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Header.module.scss";
-import logo from "../../assets/images/logo.svg";
 
 function Header() {
   let activeStyle = {
@@ -10,7 +9,7 @@ function Header() {
   return (
     <header className={`${styles.header} d-flex flex-row align-items-center`}>
       <NavLink to="/">
-        <img className={styles.logo} src={logo} alt="Logo Kasa" />
+        <img className={styles.logo} src="./logo.svg" alt="Logo Kasa" />
       </NavLink>
       <ul>
         <NavLink
