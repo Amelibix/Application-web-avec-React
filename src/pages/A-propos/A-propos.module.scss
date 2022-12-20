@@ -1,4 +1,11 @@
+@use '../../assets/styles/mixins' as mixin;
+
+
 .containerCollapse {
     margin: 50px 100px;
     max-width: 100%;
+    
+    @include mixin.sm-lt {
+        margin: 20px;
+    }
 }

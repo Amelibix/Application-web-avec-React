@@ -1,12 +1,16 @@
+@use '../../assets/styles/mixins' as mixin;
+
 .collapse {
     align-items:flex-end;
     background-color: var(--primary);
     color: var(--text-color);
     border-radius: 5px;
-    max-width: 80%;
-    margin: 15px 0 15px 130px;
+    margin: 0 30px 20px 30px;
     position: relative;
 
+    @include mixin.sm-lt {
+        margin: 10px 0 10px 0;
+    }
         button{
             width: 50px;
             height: 50px;
@@ -14,15 +18,27 @@
             background-color: transparent;
             border: none;
             rotate: 180deg;
+
+            @include mixin.sm-lt {
+                width: 35px;
+                height: 35px;
+        
+            }
             }
         h2{
             padding: 10px;
             position: absolute;
-            right: 85%;
+            right: 98%;
             font-weight: 500;
             font-size: 24px;
-        }  
-   
+            width: 150px;
+            transform: translate(98%);
+
+            @include mixin.sm-lt {
+               font-size: 13px;
+        
+            }
+        }    
 .text {
     padding:20px;
     background-color: var(--gray-1);
@@ -30,7 +46,9 @@
     color: var(--primary);
     font-size: 24px;
     font-weight: 400;
-    
+
+    @include mixin.sm-lt {
+        font-size: 12px;
+    }
    }
-  
 }

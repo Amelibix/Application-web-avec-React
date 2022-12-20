@@ -7,7 +7,7 @@ function ProposPage() {
   const sectionData = dataSection;
 
   return (
-    <div className="flex-fill">
+    <div className="flex-fill ">
       <Banner className={styles.containerBanner} />
       <div className={` d-flex flex-column ${styles.containerCollapse}`}>
         {sectionData.map((r) => (

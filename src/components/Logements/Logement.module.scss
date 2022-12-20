@@ -20,6 +20,7 @@
     border-radius: 10px;
     @include mixin.sm-lt {
       height: 230px;
+      width: 340px;
     }
   }
   h3 {
