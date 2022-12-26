@@ -9,3 +9,23 @@
         margin: 20px;
     }
 }
+
+.banner {
+    background:rgba(22, 21, 21, 0.199) url("../../assets/images/PageProposBanner.png") ;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode:hue;
+    height: 230px;
+    margin: 65px 100px 0 100px;
+    border-radius: 25px;
+   
+    @include mixin.sm-lt {
+        background:rgba(22, 21, 21, 0.199) url("../../assets/images/PageProposBannerMobile.png") ;
+        background-size: cover;
+        background-position:center ;
+        background-blend-mode:hue;
+        height: 230px;
+        margin: 20px ;
+    }   
+}
+

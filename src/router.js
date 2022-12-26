@@ -19,7 +19,7 @@ export const router = createBrowserRouter([
         element: <Propos />,
       },
       {
-        path: "/logement",
+        path: "/logement/:id",
         element: <Logement />,
       },
       {

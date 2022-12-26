@@ -17,8 +17,8 @@
         grid-auto-columns: 340px;
     }
     @include mixin.sm-lt {
-        grid-template-columns: 340px ;
-        grid-auto-columns: 340px;
+        grid-template-columns: 1fr ;
+        grid-auto-columns: 1fr;
         gap: 20px;
     }
 }
@@ -30,13 +30,16 @@
     margin: 50px 100px;
     max-width: 100%;
     
+    
+      
+    
     @include mixin.md-lt{
         padding: 50px 0;
     }
     @include mixin.sm-lt {
         background-color: var(--text-color);
         margin: 20px;
-        padding: 20px;
+        padding: 0px 0;
 
     }
 }

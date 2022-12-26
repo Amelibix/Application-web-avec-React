@@ -13,8 +13,3 @@ function Banner() {
 }
 
 export default Banner;
-/*<img
-        className={styles.bannerImg}
-        src={banner}
-        alt="Banner, page d'Accueil"
-      />*/
