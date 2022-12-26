@@ -2,15 +2,22 @@
 
 .collapse {
     align-items:flex-end;
-    background-color: var(--primary);
     color: var(--text-color);
     border-radius: 5px;
-    margin: 0 30px 20px 30px;
+    margin: 0 30px 30px 30px;
     position: relative;
 
     @include mixin.sm-lt {
         margin: 10px 0 10px 0;
     }
+    .containerButton{
+        width: 100%;
+        border-radius: 5px;
+        justify-content: space-between;
+        background-color: var(--primary);
+        margin-bottom: -10px;
+        z-index: 2;
+       
         button{
             width: 50px;
             height: 50px;
@@ -18,29 +25,28 @@
             background-color: transparent;
             border: none;
             rotate: 180deg;
+            border-radius: 5px;
 
             @include mixin.sm-lt {
                 width: 35px;
                 height: 35px;
-        
             }
-            }
+        }
         h2{
             padding: 10px;
-            position: absolute;
-            right: 98%;
             font-weight: 500;
             font-size: 24px;
             width: 150px;
-            transform: translate(98%);
+            background-color: var(--primary);
+            border-radius: 5px;
 
             @include mixin.sm-lt {
                font-size: 13px;
-        
             }
-        }    
+        } 
+    }   
 .text {
-    padding:20px;
+    padding: 20px;
     background-color: var(--gray-1);
     border-radius: 0 0 5px 5px;
     color: var(--primary);
@@ -51,4 +57,8 @@
         font-size: 12px;
     }
    }
+
+.textOpen {
+    width: 100%;
+    }
 }

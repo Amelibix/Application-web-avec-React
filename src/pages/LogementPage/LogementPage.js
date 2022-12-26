@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom";
 import Error from "../../pages/ErrorPage/ErrorPage";
 import Caroussel from "../../components/Caroussel/Caroussel";
 import styles from "./LogementPage.module.scss";
-
+import Collapse from "../../components/Collapse/Collapse";
 import StarsPage from "../../components/Stars/Stars";
 
 function LogementPage() {
@@ -32,6 +32,8 @@ function LogementPage() {
   if (!item) {
     return <Error />;
   }
+
+  const equipementList = item.equipments.map((e) => <li key={e}>{e}</li>);
 
   return (
     <>
@@ -60,6 +62,15 @@ function LogementPage() {
           <div>
             <StarsPage rating={item.rating} />
           </div>
+        </div>
+      </div>
+
+      <div className={`d-flex  ${styles.collapse}`}>
+        <div className={` ${styles.description}`}>
+          <Collapse texte={item.description} title="Description" />
+        </div>
+        <div className={`${styles.equipements}`}>
+          <Collapse texte={equipementList} title="Equipements" />
         </div>
       </div>
     </>

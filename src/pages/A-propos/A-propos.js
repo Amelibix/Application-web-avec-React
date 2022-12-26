@@ -13,7 +13,7 @@ function ProposPage() {
 
       <div className={` d-flex flex-column ${styles.containerCollapse}`}>
         {sectionData.map((r) => (
-          <Collapse key={r.id} title={r.title} text={r.text} />
+          <Collapse key={r.id} title={r.title} texte={r.text} />
         ))}
       </div>
     </div>
