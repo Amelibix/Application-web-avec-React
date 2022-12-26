@@ -66,10 +66,10 @@ function LogementPage() {
       </div>
 
       <div className={`d-flex  ${styles.collapse}`}>
-        <div className={` ${styles.description}`}>
+        <div>
           <Collapse texte={item.description} title="Description" />
         </div>
-        <div className={`${styles.equipements}`}>
+        <div>
           <Collapse texte={equipementList} title="Equipements" />
         </div>
       </div>

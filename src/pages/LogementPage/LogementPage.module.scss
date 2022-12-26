@@ -28,7 +28,7 @@
                 background-color: var(--primary);
                 font-size: 14px;
                 font-weight: 500;
-                width: 115px;
+                
                 padding: 5px;
                 margin-right: 10px;
                 text-align: center;
@@ -66,7 +66,6 @@
 .collapse {
     margin: 70px;
     max-width: 100%;
-    
     div{
         flex: 1 1 0;
         h2{
@@ -74,20 +73,9 @@
             }
         p{
             font-size:18px ;
-            
             }
         li{
             list-style: none;
-            
         }
-        
-      }    
-    
-    
-
-    
-        
-       
-    
-   
+    }    
 }
