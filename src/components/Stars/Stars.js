@@ -1,18 +1,20 @@
 import React from "react";
-import styles from "./Stars.module.scss";
+import etoile from "../../assets/images/stargray.png";
+import etoileColor from "../../assets/images/starscolor.png";
 
-function StarsPage(element, { rating }) {
+function StarsPage(element) {
   let numberStar = element.rating;
 
   const starsMax = 5;
   const stars = [];
 
-  for (let i = 1; i < starsMax + 1; i++) {
+  for (let i = 1; i <= starsMax; i++) {
     if (i <= numberStar) {
-      stars.push(<img src="../../assets/images/stargray.png" alt={rating} />);
+      stars.push(<img src={etoileColor} alt="étoile color" />);
     } else {
-      stars.push(<img src="../../assets/images/stargray.png" alt={rating} />);
+      stars.push(<img src={etoile} alt="étoile" />);
     }
   }
+  return <>{stars}</>;
 }
 export default StarsPage;
