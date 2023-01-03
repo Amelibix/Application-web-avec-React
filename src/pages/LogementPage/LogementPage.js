@@ -58,7 +58,7 @@ function LogementPage() {
             <p>{item.host.name}</p>
             <img src={item.host.picture} alt={item.host.name} />
           </div>
-          <div>
+          <div className={`d-flex  ${styles.stars}`}>
             <StarsPage rating={item.rating} />
           </div>
         </div>

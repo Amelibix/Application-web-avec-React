@@ -11,13 +11,13 @@
   }
   
   @mixin sm-lt {
-    @media (max-width: 768px) {
+    @media (max-width: 771px) {
       @content;
     }
   }
   
   @mixin md {
-    @media (min-width: 769px) and (max-width: 992px) {
+    @media (min-width: 772px) and (max-width: 992px) {
       @content;
     }
   }

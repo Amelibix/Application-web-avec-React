@@ -10,9 +10,9 @@ function StarsPage(element) {
 
   for (let i = 1; i <= starsMax; i++) {
     if (i <= numberStar) {
-      stars.push(<img src={etoileColor} alt="étoile color" />);
+      stars.push(<img key={i} src={etoileColor} alt="étoile color" />);
     } else {
-      stars.push(<img src={etoile} alt="étoile" />);
+      stars.push(<img key={i} src={etoile} alt="étoile" />);
     }
   }
   return <>{stars}</>;
