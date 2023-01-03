@@ -1,43 +1,42 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { data } from "../../data/dataLogement";
+//import { data } from "../../data/dataLogement";
 import { useParams } from "react-router-dom";
-import Error from "../../pages/ErrorPage/ErrorPage";
-import Caroussel from "../../components/Caroussel/Caroussel";
+//import Error from "../../pages/ErrorPage/ErrorPage";
+import Carousel from "../../components/Carousel/Carousel";
 import styles from "./LogementPage.module.scss";
 import Collapse from "../../components/Collapse/Collapse";
 import StarsPage from "../../components/Stars/Stars";
+//import { redirect } from "react-router-dom";
 
 function LogementPage() {
   const { id } = useParams();
   const [item, setItem] = useState();
 
-  /*const [data, setData] = useState([]);
-
   useEffect(() => {
     async function fetchdata() {
-      const response = await fetch("../../data/data.json");
+      const response = await fetch("http://localhost:3000/data.json");
       const data = await response.json();
-      setData(data);
+
+      const foundItem = data.find((c) => c.id === id);
+
+      /*if (!foundItem) {
+        return redirect("/error");
+      }*/
+      setItem(foundItem);
     }
     fetchdata();
-  }, []);*/
-
-  useEffect(() => {
-    const foundItem = data.find((c) => c.id === id);
-
-    setItem(foundItem);
   }, [id]);
 
   if (!item) {
-    return <Error />;
+    return <></>;
   }
 
   const equipementList = item.equipments.map((e) => <li key={e}>{e}</li>);
 
   return (
     <>
-      <Caroussel />
+      <Carousel data={item.pictures} />
       <div className={`d-flex ${styles.container}`}>
         <div className={`d-flex flex-column ${styles.containerLeft}`}>
           <div>

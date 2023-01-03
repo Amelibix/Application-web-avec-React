@@ -1,0 +1,41 @@
+.containerCarousel{
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    margin: 50px 100px;
+    height: 450px;
+
+    .slideImage{
+    border-radius: 25px;
+    width: 2000px;
+    height: 450px;
+    object-fit: cover; 
+        
+    }
+
+    .btnright{
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        top: 40%;
+        right: 20px;
+        cursor: pointer;
+    
+    }
+    .btnleft{
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        top: 40%;
+        left: 20px;
+        cursor: pointer;
+    }
+   .number{
+    text-align: center;
+    margin-top: -50px;
+    font-size: 18px;
+    color: var(--text-color);
+    
+   }
+    
+}
