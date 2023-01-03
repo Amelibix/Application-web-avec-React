@@ -1,5 +1,33 @@
 @use '../../assets/styles/mixins' as mixin;
 
+.banner {
+    background:rgba(22, 21, 21, 0.199) url("../../assets/images/banner.png") ;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode:hue;
+    height: 230px;
+    margin: 65px 100px 0 100px;
+    border-radius: 25px;
+    h2{
+        font-weight: 500;
+        font-size: 48px;
+        color: var(--text-color);
+        margin-left: 15px;
+    }
+    
+    @include mixin.sm-lt {
+        background:rgba(22, 21, 21, 0.199) url("../../assets/images/imageMobile.png") ;
+        background-size: cover;
+        background-position: center;
+        background-blend-mode:hue;
+        height: 120px;
+        margin: 20px ;
+        h2{
+            font-size: 24px;
+        }
+    }   
+}
+
 
 .grid {
     display: grid;
@@ -29,10 +57,7 @@
     background-color: var(--gray-1);
     margin: 50px 100px;
     max-width: 100%;
-    
-    
-      
-    
+
     @include mixin.md-lt{
         padding: 50px 0;
     }

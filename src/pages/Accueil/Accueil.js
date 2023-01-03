@@ -1,6 +1,5 @@
 import styles from "./Accueil.module.scss";
 import Logement from "../../components/Logements/Logement";
-import Banner from "../../components/Banner/Banner";
 import { useEffect, useState } from "react";
 
 function Accueilpage() {
@@ -16,8 +15,12 @@ function Accueilpage() {
   }, []);
 
   return (
-    <div className={`${styles.bannerAccueil}flex-fill`}>
-      <Banner />
+    <div className="flex-fill">
+      <div
+        className={`${styles.banner} d-flex align-items-center justify-content-center`}
+      >
+        <h2>Chez vous, partout et ailleurs</h2>
+      </div>
       <div className={styles.contentCard}>
         <div className={styles.grid}>
           {data.map((r) => (
