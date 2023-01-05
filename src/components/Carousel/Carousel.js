@@ -4,9 +4,9 @@ import { useState } from "react";
 import left from "../../assets/images/leftcarousel.png";
 import right from "../../assets/images/rightcarousel.png";
 
-function LogementPage({ data }) {
+function LogementPage({ pictures }) {
   const [current, setCurrent] = useState(0);
-  const length = data.length;
+  const length = pictures.length;
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
@@ -18,13 +18,18 @@ function LogementPage({ data }) {
 
   return (
     <div className={`d-flex ${styles.containerCarousel}`}>
-      <button className={styles.btnleft}>
-        <img onClick={prevSlide} src={left} alt="flèche gauche" />
-      </button>
-      <button className={styles.btnright}>
-        <img onClick={nextSlide} src={right} alt="flèche droite" />
-      </button>
-      {data.map((img, index) => {
+      {length > 1 && (
+        <button className={styles.btnleft}>
+          <img onClick={prevSlide} src={left} alt="flèche gauche" />
+        </button>
+      )}
+      {length > 1 && (
+        <button className={styles.btnright}>
+          <img onClick={nextSlide} src={right} alt="flèche droite" />
+        </button>
+      )}
+
+      {pictures.map((img, index) => {
         return (
           <div key={index}>
             {index === current && (
@@ -34,7 +39,7 @@ function LogementPage({ data }) {
                 className={styles.slideImage}
               />
             )}
-            {index === current && (
+            {index === current && length > 1 && (
               <div className={styles.number}>
                 {current + 1}/{length}
               </div>

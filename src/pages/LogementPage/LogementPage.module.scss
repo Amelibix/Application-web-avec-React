@@ -1,6 +1,7 @@
 @use '../../assets/styles/mixins' as mixin;
 
 .container{
+    justify-content: space-between;
     margin: 50px 100px;
     max-width: 100%;
     @include mixin.sm-lt {
@@ -122,6 +123,7 @@
             }
         p{
             font-size:18px ;
+            height: 150px;
             @include mixin.sm-lt {
                font-size: 12px ;
             }

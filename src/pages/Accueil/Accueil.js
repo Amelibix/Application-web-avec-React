@@ -7,7 +7,7 @@ function Accueilpage() {
 
   useEffect(() => {
     async function fetchdata() {
-      const response = await fetch("data.json");
+      const response = await fetch("http://localhost:3000/data.json");
       const data = await response.json();
       setData(data);
     }
@@ -23,8 +23,13 @@ function Accueilpage() {
       </div>
       <div className={styles.contentCard}>
         <div className={styles.grid}>
-          {data.map((r) => (
-            <Logement key={r.id} title={r.title} image={r.cover} id={r.id} />
+          {data.map((logement) => (
+            <Logement
+              key={logement.id}
+              title={logement.title}
+              image={logement.cover}
+              id={logement.id}
+            />
           ))}
         </div>
       </div>

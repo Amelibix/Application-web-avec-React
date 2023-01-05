@@ -4,12 +4,10 @@ import styles from "./Collapse.module.scss";
 import vector from "../../assets/images/vector.png";
 
 function Collapsible({ title, texte }) {
-  const [open, setOPen] = useState(false);
-  const [rotate, setRotate] = useState("180deg");
+  const [open, setOPen] = useState();
 
-  const collapse = () => {
+  const toggleCollapse = () => {
     setOPen(!open);
-    setRotate(rotate === "180deg" ? "0deg" : "180deg");
   };
 
   return (
@@ -17,13 +15,8 @@ function Collapsible({ title, texte }) {
       <div className={`d-flex ${styles.containerButton}`}>
         <h2 className="">{title}</h2>
 
-        <button>
-          <img
-            onClick={collapse}
-            style={{ rotate: `${rotate}` }}
-            src={vector}
-            alt={title}
-          />
+        <button className={open && styles.rotate180}>
+          <img onClick={toggleCollapse} src={vector} alt={title} />
         </button>
       </div>
       <div className={`d-flex ${styles.textOpen}`}>
