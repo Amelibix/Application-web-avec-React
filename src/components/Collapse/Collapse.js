@@ -15,10 +15,11 @@ function Collapsible({ title, texte }) {
       <div className={`d-flex ${styles.containerButton}`}>
         <h2>{title}</h2>
 
-        <button className={open && styles.rotate180}>
+        <button className={styles.rotate180}>
           <img onClick={toggleCollapse} src={vector} alt={title} />
         </button>
       </div>
+
       <div className={`d-flex ${styles.textOpen}`}>
         {open && (
           <div className={`d-flex ${styles.text}`}>

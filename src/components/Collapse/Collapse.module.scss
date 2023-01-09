@@ -24,20 +24,19 @@
             cursor: pointer;
             background-color: transparent;
             border: none;
-            
             border-radius: 5px;
-
+            
+            
             @include mixin.sm-lt {
                 width: 35px;
                 height: 35px;
             }
+            
         }
-        
         .rotate180{
-            
-            transform: rotateZ(180deg);
-            
-        }
+               transform: rotateZ(180deg);
+            }
+        
         h2{
             padding: 10px;
             font-weight: 500;

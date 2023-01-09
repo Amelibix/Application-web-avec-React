@@ -3,10 +3,6 @@ import styles from "./Header.module.scss";
 import Logo from "../../assets/images/logo.svg";
 
 function Header() {
-  let activeStyle = {
-    textDecoration: "underline",
-  };
-
   return (
     <header className={`${styles.header} d-flex flex-row align-items-center`}>
       <NavLink to="/">
@@ -15,13 +11,17 @@ function Header() {
       <ul>
         <NavLink
           to="/"
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          className={({ isActive }) =>
+            isActive ? styles.activeStyle : undefined
+          }
         >
           Accueil
         </NavLink>
         <NavLink
           to="/a-propos"
-          style={({ isActive }) => (isActive ? activeStyle : undefined)}
+          className={({ isActive }) =>
+            isActive ? styles.activeStyle : undefined
+          }
         >
           A Propos
         </NavLink>
