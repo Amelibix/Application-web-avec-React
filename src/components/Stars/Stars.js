@@ -2,8 +2,8 @@ import React from "react";
 import etoile from "../../assets/images/stargray.png";
 import etoileColor from "../../assets/images/starscolor.png";
 
-function StarsPage(element) {
-  let numberStar = element.rating;
+function StarsPage({ rating }) {
+  let numberStar = rating;
 
   const starsMax = 5;
   const stars = [];

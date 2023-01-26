@@ -126,6 +126,7 @@
             height: 150px;
             @include mixin.sm-lt {
                font-size: 12px ;
+               height: auto;
             }
             }
         li{
